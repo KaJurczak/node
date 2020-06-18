@@ -17,6 +17,11 @@ const selectPerson = () => {
     person.firstName = person.gender === 'M' ? randChoice(maleNames) : randChoice(femaleNames)
     person.lastName = randChoice(lastName)
     person.age = Math.floor(Math.random()*61)+18
+
+    const number = () => Math.floor(Math.random()*10)
+    person.phone = `${number()}${number()}${number()}-${number()}${number()}${number()}-${number()}${number()}${number()}` 
+    person.email = `${person.firstName.toLowerCase()}.${person.lastName.toLowerCase()}@.gmail.com`
+
     people.push(person)
   }
 };
@@ -28,6 +33,8 @@ fs.writeFile('people.json', peopleJSON, (err) => {
   if (err) throw err;
   console.log('The file has been saved!');
 });
+
+console.log('people', people);
 
 // const check = () => {
 //   console.log('people', people);
