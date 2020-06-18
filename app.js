@@ -34,12 +34,3 @@ fs.writeFile('people.json', peopleJSON, (err) => {
   console.log('The file has been saved!');
 });
 
-console.log('people', people);
-
-// const check = () => {
-//   console.log('people', people);
-//   console.log('peopleJSON', peopleJSON);
-  
-// };
-// check();
-
